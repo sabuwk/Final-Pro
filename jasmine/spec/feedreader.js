@@ -33,6 +33,8 @@ $(function() {
          */
 
          it('has URL defined and URL is not empty', function() {
+            
+            //Iteriert durch das allFeeds Array
             for(i = 0; i < allFeeds.length; i++) {
                 expect(allFeeds[i].url).toBeDefined();
                 expect(allFeeds[i].url.length).not.toBe(0);
@@ -47,6 +49,8 @@ $(function() {
 
 
          it('has a name defined and name is not empty', function() {
+            
+            //Iteriert durch das allFeeds Array
             for(i = 0; i < allFeeds.length; i++) {
 
                 expect(allFeeds[i].name).toBeDefined();
@@ -67,8 +71,11 @@ $(function() {
          */
 
          it('menu element is hidden by default', function() {
+            
+            // Checkt ob die Klasse menu-hidden da ist
             expect($('body').hasClass('menu-hidden')).toBe(true);
          });
+
 
 
     });
