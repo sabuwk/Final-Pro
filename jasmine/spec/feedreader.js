@@ -116,7 +116,10 @@ $(function() {
 
         it('at least a single .entry element within the .feed container', function(done) {
 
+            // Testet ob .feed länger als 0 ist
             expect($('.feed').length).toBeGreaterThan(0);
+            
+            // Testet ob .entry länger als 0 ist
             expect($('.entry').length).toBeGreaterThan(0);
 
 
@@ -125,13 +128,48 @@ $(function() {
         });
     });
 
+    /* TODO: Write a new test suite named "New Feed Selection" (15)*/
 
-
-
-    /* TODO: Write a new test suite named "New Feed Selection"
+    describe('New Feed Selection', function() {
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
+         * Remember, loadFeed() is asynchronous. (16)
          */
+
+        var myFeed;
+
+        // Stellt wieder sicher, dass der Feed geladen ist
+        beforeEach(function (done) {
+
+            loadFeed(0, function () {
+            
+                // Setzt die myFeed Variable 
+                myFeed = $('.feed').html();
+
+                // verhindert den Tiemout
+                loadFeed(1, done);
+
+            });
+        });
+
+        // die eigentliche Test-Methode
+        it('content actually changes', function(done) {
+
+            // guckt das der Feed nicht das gleiche ist wie myFeed das oben definiert wurde
+            expect($('.feed').html()).not.toBe(myFeed);
+            done();
+
+        });
+
+
+        // setzt alles wieder zurück
+        afterAll(function(done) {
+        
+            loadFeed(0, done); 
+        });
+
+    });
+   
+
 }());
