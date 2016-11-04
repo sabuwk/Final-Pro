@@ -1,0 +1,6 @@
+{
+  "name": "Final-pro",
+  "tagline": "Final Udacity Project",
+  "body": "# Udacity: Feed Reader Testing\r\n\r\nThis ist the final project for the Udacity Front End Developer Nanodegree\r\n\r\n# What does this project contain?\r\n\r\n## index.html\r\nmain file to start die application\r\n\r\n## /css/style.css\r\nstyles of the website\r\n\r\n## /js/app.js\r\nall the feed-reader-js-data\r\n\r\n## /jasemine/feedreader.js\r\ntesting-file with jasemine and part of the udacity project!\r\n\r\n# How to start the Application \r\n\r\nTo start die Application just click on the index.html in the main directory\r\n\r\n# Have a look\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
