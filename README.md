@@ -19,6 +19,3 @@ testing-file with jasemine and part of the udacity project!
 # How to start the Application 
 
 To start die Application just click on the index.html in the main directory
-
-# Have a look
-
